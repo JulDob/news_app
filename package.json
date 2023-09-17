@@ -1,0 +1,35 @@
+{
+  "name": "js-mastery-news",
+  "version": "1.0.0",
+  "repository": "https://gitlab.godeltech.com/m.dziarkach/js-mastery-news.git",
+  "license": "MIT",
+  "scripts": {
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "install": "npm run client:install && npm run server:install",
+    "client:start": "npm run client:install && cd client && npm run start",
+    "server:start": "npm run server:install && cd server && npm run start",
+    "server:start:dev": "npm run server:install && cd server && npm run dev",
+    "client:lint": "cd client && npm run lint",
+    "server:lint": "cd server && npm run lint",
+    "lint": "npm run client:lint && npm run server:lint",
+    "client:prettier": "cd client && npm run prettier",
+    "server:prettier": "cd server && npm run prettier",
+    "prettier": "npm run client:prettier && npm run server:prettier"
+  },
+  "devDependencies": {
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.(ts|js|jsx)": [
+      "npm run prettier",
+      "npm run lint"
+    ]
+  }
+}

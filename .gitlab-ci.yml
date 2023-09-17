@@ -1,0 +1,75 @@
+stages:
+  - install
+  - lint-client
+  - lint-api
+  - test-client
+  - build-client
+  - build-api
+
+install:
+  stage: install
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - npm install
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - client/node_modules/
+      - server/node_modules/
+
+build-client:
+  stage: build-client
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - echo "Start building App"
+    - cd client
+    - npm run build
+    - echo "Build successfully!"
+
+lint-client:
+  stage: lint-client
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - echo "Linting App"
+    - cd client
+    - npm run lint
+    - echo "Lint successfully!"
+
+test-client:
+  stage: test-client
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - echo "Testing App"
+    - cd client
+    - npm run test
+    - echo "Test successfully!"
+
+build-api:
+  stage: build-api
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - echo "Start building api"
+    - cd server
+    - npm run build
+    - echo "Build successfully!"
+
+lint-api:
+  stage: lint-api
+  tags:
+    - 'tag'
+  image: node:18-alpine
+  script:
+    - echo "Linting api"
+    - cd server
+    - npm run lint
+    - echo "Lint successfully!!!"
