@@ -1,0 +1,12 @@
+.comments {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.commentNumber {
+  margin-left: 5px;
+}

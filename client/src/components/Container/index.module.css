@@ -1,0 +1,15 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.md {
+  max-width: 1200px;
+}
+
+.lg {
+  max-width: 1300px;
+}

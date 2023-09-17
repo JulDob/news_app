@@ -1,0 +1,37 @@
+.navList {
+  display: flex;
+}
+
+.navItem {
+  list-style: none;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.navItemLink {
+  text-decoration: none;
+  color: gray;
+}
+
+.navItemActive {
+  color: black;
+}
+
+.authContainer {
+  margin-left: 20px;
+}
+
+.navContainer {
+  display: flex;
+}
+.authLink {
+  text-decoration: none;
+}
+
+.authLink:not(:last-child) {
+  margin-right: 15px;
+}
+
+.navContainer {
+  display: flex;
+}
