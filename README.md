@@ -45,9 +45,3 @@ docker images
 docker tag <hash> <docker-repository-name>
 docker push <docker-repository-name>
 ```
-
-#### Register gitlab runner
-
-```bash
-gitlab-runner register --non-interactive --url https://gitlab.godeltech.com/ --registration-token <token> --executor "shell" --tag-list "tag" --run-untagged
-```
