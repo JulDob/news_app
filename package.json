@@ -1,7 +1,7 @@
 {
   "name": "js-mastery-news",
   "version": "1.0.0",
-  "repository": "https://gitlab.godeltech.com/m.dziarkach/js-mastery-news.git",
+  "repository": "https://github.com/JulDob/news_app.git",
   "license": "MIT",
   "scripts": {
     "client:install": "cd client && npm install",
